@@ -40,6 +40,8 @@ body {
 .container__nav-sub {
   display: flex;
   justify-content: space-between;
+  width: 70%;
+  margin: auto;
   margin-top: 2.5rem;
 }
 
@@ -48,6 +50,10 @@ body {
   align-items: center;
   justify-content: space-around;
   height: 30rem;
+  z-index: 1;
+}
+
+.container__nav-sub img {
   z-index: 1;
 }
 
@@ -67,6 +73,32 @@ body {
   border-radius: 25px;
   width: 50%;
   cursor: pointer;
+}
+
+.container__nav button[type="submit"] {
+  width: 20%;
+  border: none;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.container__items--infos i:hover {
+  color: var(--btn-primary-pink--);
+}
+
+.container__nav button[type="submit"]:hover {
+  color: var(--grayish-blue--);
+}
+
+button {
+  z-index: 1;
 }
 
 /* SECTION */
@@ -99,12 +131,16 @@ section:first-of-type {
   padding: 2rem;
 }
 
+.container__article--sub p {
+  color: var(--grayish-blue--);
+}
+
 /* FOOTER */
 
 .container__footer--main {
   background-color: var(--very-Dark-cyan--);
-  color: #fff;
-  margin-top: 5rem;
+  margin-top: 20rem;
+  color: var(--grayish-blue--);
   width: 100%;
 }
 
@@ -114,10 +150,48 @@ section:first-of-type {
 
 .container__items--infos ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--grayish-blue--);
 }
 
-@media screen and (max-width: 1200px) {
+i {
+  padding-right: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer img {
+  filter: invert(50%);
+}
+
+/* ASIDE */
+
+.container__aside--main {
+  position: relative;
+
+}
+
+.container__aside--sub {
+  position: absolute;
+  display: flex;
+  right: 50%;
+  top: 15rem;
+  transform: translate(50%, -50%);
+  border-radius: 25px;
+  padding: 5rem 10rem 5rem 10rem;
+  background-color: #FFF;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+}
+
+.container__aside--sub button {
+  width: 75%;
+}
+
+/* RESPONSIVE*/
+
+@media screen and (max-width: 1350px) {
   .container__header--sub {
     flex-direction: column;
   }
@@ -138,5 +212,24 @@ section:first-of-type {
     flex-wrap: wrap;
     height: 30rem;
     flex-direction: column-reverse;
+    text-align: center;
   }
+
+  footer .container  {
+    flex-direction: column;
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  .container-2 {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+.container__header > img {
+  width: 100%;
+}
+
+.container a:hover {
+  color: var(--btn-primary-pink--);
 }
