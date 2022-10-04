@@ -142,6 +142,7 @@ section:first-of-type {
   margin-top: 20rem;
   color: var(--grayish-blue--);
   width: 100%;
+  height: 30rem;
 }
 
 .container__items--infos ul li {
@@ -161,6 +162,10 @@ i {
 
 footer img {
   filter: invert(50%);
+}
+
+footer .container {
+  height: 100%;
 }
 
 /* ASIDE */
@@ -223,6 +228,10 @@ footer img {
   .container-2 {
     display: flex;
     flex-direction: column !important;
+  }
+
+  footer .container {
+    padding-top: 10rem;
   }
 }
 
